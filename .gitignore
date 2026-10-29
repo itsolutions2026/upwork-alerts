@@ -1,0 +1,9 @@
+# Server secret — never commit
+server/token.txt
+
+# Bundled binary (download cloudflared separately, ~53 MB)
+server/cloudflared.exe
+
+# Node
+node_modules/
+npm-debug.log*

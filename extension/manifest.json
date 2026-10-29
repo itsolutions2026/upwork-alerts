@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Upwork Activity On Top",
+  "version": "2.0.0",
+  "description": "Shows job activity at the top of Upwork job pages, and watches your job search for new posts.",
+  "permissions": ["storage", "alarms", "tabs"],
+  "host_permissions": ["https://www.upwork.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Upwork Watcher settings",
+    "default_popup": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.upwork.com/*", "https://upwork.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.upwork.com/nx/search/jobs*"],
+      "js": ["list.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

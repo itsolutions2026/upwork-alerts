@@ -1,0 +1,31 @@
+/* Our own widget only. No rules here touch Upwork's elements. */
+#uat-panel {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 20px;
+  max-width: calc(100vw - 32px);
+  padding: 8px 14px;
+  background: #ffffff;
+  color: #001e00;
+  border: 2px solid #14a800;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font: 14px/1.5 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+#uat-panel .uat-title {
+  font-weight: 700;
+  cursor: move;
+  user-select: none;
+}
+
+#uat-panel .uat-row {
+  display: flex;
+  gap: 6px;
+}

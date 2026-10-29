@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Upwork Watcher settings</title>
+  <style>
+    body { font: 14px/1.5 "Segoe UI", Arial, sans-serif; min-width: 360px; max-width: 480px; margin: 16px 24px; color: #001e00; }
+    label { display: block; margin-top: 12px; font-weight: 600; }
+    input { width: 100%; padding: 6px 8px; box-sizing: border-box; }
+    button { margin-top: 16px; padding: 6px 16px; }
+    .hint { color: #5e6d55; font-weight: 400; font-size: 12px; }
+    #status { margin-top: 16px; padding: 8px; background: #f2f7f2; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h2>Upwork Watcher</h2>
+  <label>Server address
+    <div class="hint">Cloudflare Tunnel: wss://upwork.yourdomain.com · Tailscale/LAN: ws://100.x.x.x:8787</div>
+    <input id="serverUrl" placeholder="wss://upwork.yourdomain.com">
+  </label>
+  <label>Token
+    <div class="hint">Must match TOKEN on the server.</div>
+    <input id="token" type="password">
+  </label>
+  <button id="save">Save</button>
+  <button id="reset">Forget seen jobs</button>
+  <div id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>
